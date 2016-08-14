@@ -12,4 +12,9 @@ list_datasets <-  portal$search(q = "production")
 list_datasets[[1]]
 
 dts <- list_datasets[[1]]
-dts$get_records()
+dts <- as.data.frame(dts$get_records())
+
+data <- dts[order(dts$annee),]
+data
+barplot(as.matrix(data[,2:3]), beside=TRUE, main="Production d'Electricité par Eolien et
+        Solaire en fonction des années", xlab='annee')
