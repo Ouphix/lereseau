@@ -2,7 +2,7 @@
 title: "Production energie API RTE"
 author: "Thomas Gargot"
 date: "14 août 2016"
-output: html_document
+output: pdf_document
 ---
 
 ```{r}
